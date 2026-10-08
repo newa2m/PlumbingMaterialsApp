@@ -1,0 +1,41 @@
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+build/
+coverage/
+pubspec.lock
+
+# Android/IDE
+.gradle/
+android/.gradle/
+android/local.properties
+android/**/key.properties
+*.jks
+*.keystore
+.idea/
+*.iml
+.vscode/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+*.log
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.mobileprovision
+
+# Local SQLite/databases and generated exports
+*.db
+*.sqlite
+*.sqlite3
+*.apk
+*.aab
+*.json.bak
