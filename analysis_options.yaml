@@ -1,0 +1,6 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # The application is intentionally Arabic-first and uses compact screen widgets.
+    avoid_print: true
