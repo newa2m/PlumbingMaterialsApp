@@ -31,6 +31,16 @@ jobs:
       - name: Ensure Android platform files exist
         run: flutter create --platforms=android --project-name plumbing_takeoff .
 
+      - name: Remove only generated Flutter sample test
+        shell: bash
+        run: |
+          # flutter create may add the stock test/widget_test.dart when the
+          # repository has no generated platform project yet. It references
+          # MyApp, which is intentionally not part of this application.
+          if [ -f test/widget_test.dart ] && grep -q "MyApp" test/widget_test.dart; then
+            rm test/widget_test.dart
+          fi
+
       - name: Accept Android licenses
         run: yes | flutter doctor --android-licenses
 
